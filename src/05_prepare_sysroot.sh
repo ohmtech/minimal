@@ -16,6 +16,9 @@ echo "Preparing glibc. This may take a while."
 # 1) Copy everything from glibc to the new sysroot area.
 cp -r $GLIBC_INSTALLED/* $SYSROOT
 
+# 1) Copy/Merge everything from alsa to the new sysroot area.
+cp -R $ALSA_INSTALLED/* $SYSROOT
+
 # 2) Copy all kernel headers to the sysroot folder.
 cp -r $KERNEL_INSTALLED/include $SYSROOT
 
@@ -28,6 +31,7 @@ cp -r $KERNEL_INSTALLED/include $SYSROOT
 mkdir -p $SYSROOT/usr
 ln -s ../include $SYSROOT/usr/include
 ln -s ../lib $SYSROOT/usr/lib
+ln -s ../share $SYSROOT/usr/share
 
 cd $SRC_DIR
 
