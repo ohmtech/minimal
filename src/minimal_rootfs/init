@@ -26,8 +26,13 @@
 
 echo -e "Welcome to \\e[1mMinimal \\e[32mLinux \\e[31mLive\\e[0m (/init)"
 
+#ls -l /proc/asound
+#cat /proc/asound/cards
+#cat /proc/asound/devices
+#cat /proc/asound/pcm
+
 # Let's call our program
-/a.out
+#/a.out
 
 # Let's mount all core file systems.
 /etc/01_prepare.sh
