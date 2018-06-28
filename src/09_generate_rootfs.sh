@@ -42,6 +42,13 @@ fi
 cp $SYSROOT/lib/libm.so.6 $ROOTFS/lib
 cp $SYSROOT/lib/libc.so.6 $ROOTFS/lib
 
+cp $SYSROOT/lib/libasound.so.2 $ROOTFS/lib
+cp $SYSROOT/lib/libpthread.so.0 $ROOTFS/lib
+cp $SYSROOT/lib/libdl.so.2 $ROOTFS/lib
+cp $SYSROOT/lib/librt.so.1 $ROOTFS/lib
+mkdir -p $ROOTFS/share
+cp -R $SYSROOT/share/alsa $ROOTFS/share/
+
 # Copy all necessary 'glibc' libraries to '/lib' END.
 
 echo "Reducing the size of libraries and executables."

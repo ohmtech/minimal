@@ -7,6 +7,10 @@ set -e
 ./02_build_kernel.sh
 ./03_get_glibc.sh
 ./04_build_glibc.sh
+
+./get_alsa.sh
+./build_alsa.sh
+
 ./05_prepare_sysroot.sh
 
 cd init

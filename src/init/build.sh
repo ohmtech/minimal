@@ -7,9 +7,10 @@ set -e
 
 echo "*** BUILD INIT BEGIN ***"
 
-gcc --sysroot ../work/sysroot main.cpp
+gcc --sysroot=../work/sysroot main.cpp -lasound -lm -lpthread -ldl
 
-cp a.out ../minimal_rootfs/a.out
+mkdir -p ../minimal_rootfs/etc/autorun
+cp a.out ../minimal_rootfs/etc/autorun/a.out
 
 # We go back to the main MLL source folder.
 cd $SRC_DIR
